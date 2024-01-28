@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>ECOMMERCE APP</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+       <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('ul').toogleClass('show');
+            });
+        });
+        </script>
+        <script type="text/javascript">
+            var left=1;
+            var right=5;
+
+            function show()
+            {
+                for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            function moveLeft()
+            {
+                if(left<=3 && right<=7)
+                {
+                document.getElementById("c"+left).style.display="none";
+                right+=1;
+                left+=1;
+                  for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            else
+                 return;
+            }  
+            function moveRight()
+            {
+                if(left>=2 && right>=6)
+                {
+                document.getElementById("c"+right).style.display="none";
+                left-=1;
+                right-=1;
+
+                for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            else
+                 return;
+            }
+                
+         </script>
+       <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+        body{
+            background-image: url(mo.jpg);
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: 83%;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .head{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+            margin-top: 0px;
+            background-color: black;
+        }
+        i{
+            color: white;
+            cursor: pointer;
+        }
+        .head .logo{
+            flex: 1;
+            color: yellow;
+            margin-left: 30px;
+            font-style: italic;
+        }
+       .head .search-box{
+            flex: 1;
+            position: relative;
+            margin-right: 0px;
+        }
+        .search-box input{
+            width: 500px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background: white;
+            border-radius: 0px 10px 0px 10px;
+            font-size: 16px;
+            margin-left: -50px;
+        }
+        .search-box button{
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border-radius: 0px 10px 0px 0px;
+            border: none;
+            outline: none;
+            margin-left:-100px;
+            font-size: 16px;
+            background: yellow;
+            position: fixed;
+        }
+        .search-box button:hover{
+           background-color: goldenrod;
+        }
+        .h2{
+            background-color: yellow;
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 250px;
+            width: 70px;
+            height: 35px;
+            border-radius: 10px 10px 10px 10px;
+            display: flex;
+        }
+        .login{
+            color: black;
+            display: inline-block;
+            margin-left: 6px;
+            font-size: medium;
+            margin-top: 0px;
+        }
+        .login:hover{
+            color: black;
+        }
+        .h2:hover{
+            background-color: orange;
+        }
+        .social-link{
+            font-size: xx-large;
+            margin-left: 30px;
+            margin-top: -8px;
+            align-items: center;
+        }
+        .social-link:hover{
+            color: orange;
+        }
+        .line{
+            background-color: black;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            margin-top: 70px;
+        }
+        .nav{
+            margin-left: 250px;
+        }
+        .nav .nav-pills{
+            color: white;
+        }
+        .fa-solid{
+            margin-right: 30px;
+        }
+        #btn{
+            font-size: 29px;
+            flex: 1;
+            padding: 0 40px;
+            margin-right: 50px;
+            display: none;
+        }
+        #btn li{
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            border: 1px solid#151515;
+            border-radius: 5px;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            padding: 0px;
+            margin: 0px;
+            top: 30px;
+        }
+        .child{
+            width: 18rem;
+            margin-left: 20px;
+            margin-right: 20px;
+            display: none;
+        }
+        .child img{
+            height: 300px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        #leftarrow,#rightarrow{
+           margin-left: 30px;
+           width: 5%;
+           display: inline-block;
+           height: 10px;
+        }
+        #leftarrow button,#rightarrow button{
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+            height: 30px;
+            width: 30px;
+        }
+        .content{
+            top: 0px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            width: 100%;
+            margin: auto;
+            
+        }
+        .main{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            padding: 1rem;
+            margin-left: 100px;
+        }
+        .brand{
+            width: 100%;
+        }
+        h3{
+            text-transform: uppercase;
+            margin-left: 50px;
+            margin-top: 0px;
+        }
+        .h31{
+            text-transform: uppercase;
+            margin-left: 50px;
+            margin-top: 0px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .sub{
+            margin-left: 50px;
+            margin-top: 3px;
+        }
+        .solid-line{
+            width: 1330px;
+            margin-left: 100px;
+            border: solid white 0.5px;
+            margin-top: 0px;
+        }
+        .text{
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        @media(max-width:1048px){
+           .head .logo{
+                font-size: 32px;
+                left: 0px;
+            }
+            .head .search-box .btn-1 .fa-solid{
+                margin-right: 20px;
+                font-size: 17px;
+            }
+        }
+        @media(max-width:1048px){
+            .head .search-box{
+                display: block;
+                left: 180px;
+            }
+            .head .search-box{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 70px;
+            }
+        }
+        @media(max-width:1048px){
+            .head .btn-1{
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 140px;
+                left: 40px;
+            }
+        }
+        @media(max-width:1048px){
+            .head .cart{
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 210px;
+                left: 40px;
+            }
+        }
+        @media(max-width:1000px){
+            #btn{
+                display: block;
+                color: white;
+                float: left;
+                left: -100px;
+            }
+            #btn:hover{
+                color: white;
+            }
+            .line{
+            background-color: black;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            margin-top: 280px;
+            }
+            .nav ul{
+                margin-left: 50px;
+            }
+            .line ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 280px;
+                left: 0%;
+                right: 0px;
+                transition: all .5s;
+            }
+            .line ul .show{
+                left: 0px;
+            }
+        }
+        @media(max-width:1000px){
+            .main{
+                display: block;
+                width: 100%;
+                height: 900px
+            }
+            h3{
+                margin-left: 200px;
+                margin-top: 350px;
+
+            }
+            .sub{
+                margin-left: 200px;
+            }
+            .h31{
+                margin-top: 0px;
+                margin-left: 200px;
+            }
+            .solid-line{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .text{
+                margin-left: -250px;
+            }
+        }
+        </style>
+    </head>
+    <body onload="show()">
+        <header>
+        <div class="head">
+            <div class="logo"><h1>Ecommerce</h1></div>
+            <label id="btn"><li class="fas fa-bars"></li></label>
+            <div class="search-box">
+                <form action="">
+                    <input type="text" name="search" placeholder="Product name, Category name, etc." id="srch">
+                    <button type="search"><b>Search</b></button>
+                </form>
+            </div>
+            <button class="button h2">
+                <a href="login.html" class="login"><b>Login</b></a></button>
+               <div class="social-link">
+                 <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: yellow;"></i></a>
+               </div>
+        </div>
+        <div class="line">
+            <div class="nav">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="all products.html" style="color: white;">All Products</a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Women</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="all productswomen.html">All Products</a></li>
+                            <li> <a class="dropdown-item" href="dresses.html">Dresses</a></li>
+                            <li> <a class="dropdown-item" href="pants.html">Pants</a></li>
+                            <li> <a class="dropdown-item" href="skirts.html">Skirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Men</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="all productsmens.html">All Products</a></li>
+                            <li> <a class="dropdown-item" href="shirts.html">Shirts</a></li>
+                            <li> <a class="dropdown-item" href="pantsmens.html">Pants</a></li>
+                            <li> <a class="dropdown-item" href="hoodies.html">Hoodies</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="kids.html" style="color: white;">Kids</a>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="contact.html" style="color: white;">Contact</a>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+        </header>
+        <div class="parent">
+            <div id="rightarrow" onclick="moveRight()">
+                <button>&lt;</button>
+            </div>
+            <div class="child" id="c1">
+                <img src="womenred.jpg" alt=""/>
+            </div>
+            <div class="child" id="c2">
+                <img src="ws.jpg" alt=""/>
+            </div>
+            <div class="child" id="c3">
+                <img src="sh.jpg" alt=""/>
+            </div>
+            <div class="child" id="c4">
+                <img src="kf.jpg" alt=""/>
+            </div>
+            <div class="child" id="c5">
+                <img src="h.jpg" alt=""/>
+            </div>
+            <div class="child" id="c6">
+                <img src="bj.jpg" alt=""/>
+            </div>
+            <div class="child" id="c7">
+                <img src="k.jpg" alt=""/>
+            </div>
+            <div class="child" id="c8">
+                <img src="f.jpg" alt=""/>
+            </div>
+            <div class="child" id="c9">
+                <img src="tj.jpg" alt=""/>
+            </div>
+            <div id="leftarrow" onclick="moveLeft()">
+                <button>&gt;</button>
+            </div>
+        </div>  
+        <div class="content"></div>
+        <footer>
+            <div class="main">
+                <div class="title">
+                    <h3>Women</h3>
+                    <p class="sub">Dresses</p>
+                    <p class="sub">Pants</p>
+                    <p class="sub">skirts</p>
+                </div>
+                <div>
+                    <h3 class="h31">Men</h3>
+                    <p class="sub">Shirts</p>
+                    <p class="sub">Pants</p>
+                    <p class="sub">Hoodies</p>
+                </div>
+                <div>
+                    <h3 class="h31">Kids</h3>
+                </div>
+                <div>
+                    <h3 class="h31">Links</h3>
+                    <li><a href="home.html" style="color: white;"><p class="sub">Home</p></a></li>
+                    <li><a href="login.html" style="color: white;"><p class="sub">Login</p></a></li>
+                    <li><a href="contact.html" style="color: white;"><p class="sub">Contact</p></a></li>
+                </div>
+            </div>
+            <div class="solid-line"></div>
+            <div class="text">
+                <p><b>Copywrite Ecommerce 2022-23</b></p>
+            </div>
+        </footer>   
+    </body>    
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>ECOMMERCE APP</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+       <link rel="stylessheet" href="CSS/swiper-bundle.min.css">
+       <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('ul').toogleClass('show');
+            });
+        });
+        </script>
+        <script type="text/javascript">
+            var left=1;
+            var right=5;
+
+            function show()
+            {
+                for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            function moveLeft()
+            {
+                if(left<=3 && right<=7)
+                {
+                document.getElementById("c"+left).style.display="none";
+                right+=1;
+                left+=1;
+                  for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            else
+                 return;
+            }  
+            function moveRight()
+            {
+                if(left>=2 && right>=6)
+                {
+                document.getElementById("c"+right).style.display="none";
+                left-=1;
+                right-=1;
+
+                for(i=left;i<=right;i++)
+                {
+                    document.getElementById("c"+i).style.display="inline-block";
+                }
+            }
+            else
+                 return;
+            }
+                
+        </script>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+                font-family: arial;
+            }
+            body{
+                background-image: url(mo.jpg);
+                height: 100vh;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: 83%;
+                background-size: cover;
+                background-attachment: fixed;
+                position: relative;
+                display: flex;
+            }
+            .head{
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content:space-around;
+                align-items: center;
+                position: fixed;
+                z-index: 99;
+                margin-top: 0px;
+                background-color: black;
+            }
+            i{
+                color: white;
+                cursor: pointer;
+            }
+            .head .logo{
+                flex: 1;
+                color: yellow;
+                margin-left: 30px;
+                font-style: italic;
+            }
+           .head .search-box{
+                flex: 1.3;
+                position: relative;
+                margin-right: 0px;
+            }
+            .search-box input{
+                width: 500px;
+                height: 40px;
+                border: none;
+                outline: none;
+                background: white;
+                border-radius: 0px 10px 0px 10px;
+                font-size: 16px;
+                margin-left: -150px;
+            }
+            .search-box button{
+                cursor: pointer;
+                width: 100px;
+                height: 40px;
+                border-radius: 0px 10px 0px 0px;
+                border: none;
+                outline: none;
+                margin-left:-100px;
+                font-size: 16px;
+                background: yellow;
+                position: fixed;
+            }
+            .search-box button:hover{
+               background-color: goldenrod;
+            }
+            .head a{
+                font-size: xx-large;
+                margin-right: 50px;
+            }
+            .head a:hover{
+                color: goldenrod;
+            }
+            .line{
+                background-color: none;
+                height: 40px;
+                width: 1500px;
+                position: relative;
+                margin-top: 70px;
+            }
+            .nav{
+                margin-left: 250px;
+                position: relative;
+            }
+            .nav .nav-pills{
+                color: white;
+                cursor: pointer;
+            }
+            .all{
+                text-align: center;
+                color: white;
+            }
+            .parent{
+                display: flex;
+                position: fixed;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                margin: 0px;
+            }
+            #rightarrow{
+                display: inline-block;
+                position: relative;
+                size: 20px;
+            }
+            #rightarrow button{
+                width: 35px;
+                height: 35px;
+                margin-left: 5px;
+                position: relative;
+                display: inline-block;
+            }
+            #leftarrow{
+                display: inline-block;
+                position: relative;
+                size: 20px;
+            }
+            #leftarrow button{
+                display: inline-block;
+                margin-left:5px;
+                width: 35px;
+                height: 35px;
+                position: relative;
+            }
+            .card{
+                display: none;
+                height: 500px;
+                border-radius: 20px;
+                margin-top: 20px;
+                margin-left: 5px;
+            }
+            .card-img-top{
+                display: inline-block;
+                height: 250px;
+                width: 17.8rem;
+                border-radius: 20px;
+            }
+            .card-body{
+                display: inline-block;
+                text-align: center;
+                align-items: center;
+            }
+            .buttons{
+                width: 150px;
+                display: flex;
+                height: 40px;
+                background-color: yellow;
+                margin-left: 50px;
+                border-radius: 10px;
+            }
+            .social-links{
+                display: inline-block;
+                font-weight: bold;
+                position: relative;
+                margin-top: 5px;
+                margin-left: 10px;
+            }
+            .para{
+                display: inline-block;
+                margin-left: 5px;
+                position: relative;
+                color: black;
+            }
+            @media(max-width:1048px){
+           .head .logo{
+                font-size: 32px;
+                left: 0px;
+            }
+            .head .search-box .btn-1 .fa-solid{
+                margin-right: 20px;
+                font-size: 17px;
+            }
+            }
+            @media(max-width:1048px){
+                .head .search-box{
+                display: block;
+                left: 180px;
+            }
+            .head .search-box{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 70px;
+            }
+            }  
+            @media(max-width:1048px){
+            .head .cart{
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 150px;
+                left: 40px;
+            }
+            }
+            @media(max-width:1000px){
+            #btn{
+                display: block;
+                color: white;
+                float: left;
+                left: -100px;
+            }
+            #btn:hover{
+                color: white;
+            }
+            .line{
+                background-color: black;
+                height: 40px;
+                width: 100%;
+                position: fixed;
+                margin-top: 280px;
+            }
+            .nav ul{
+                margin-left: 50px;
+            }
+            .line ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 280px;
+                left: 0%;
+                right: 0px;
+                transition: all .5s;
+            }
+            .line ul .show{
+                left: 0px;
+            }
+            }
+        </style>
+        </head>
+        <body onload="show()">
+            <header>
+            <div class="head">
+                <div class="logo"><h1>Ecommerce</h1></div>
+                <label id="btn"><li class="fas fa-bars"></li></label>
+                <div class="search-box">
+                    <form action="">
+                        <input type="text" name="search" placeholder="Product name, Category name, etc." id="srch">
+                        <button type="search"><b>Search</b></button>
+                    </form>
+                </div>
+                
+                <a href="cart.html" class="cart"><i class="fa-solid fa-cart-shopping" style="color: yellow;"></i></a>
+            </div>
+            <div class="line">
+                <div class="nav">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item1">
+                            <a class="nav-link" href="all products.html" style="color: white;">All Products</a>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Women</a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="all productswomen.html">All Products</a></li>
+                                <li> <a class="dropdown-item" href="dresses.html">Dresses</a></li>
+                                <li> <a class="dropdown-item" href="pants.html">Pants</a></li>
+                                <li> <a class="dropdown-item" href="skirts.html">Skirts</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Men</a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="all productsmens.html">All Products</a></li>
+                                <li> <a class="dropdown-item" href="shirts.html">Shirts</a></li>
+                                <li> <a class="dropdown-item" href="pantsmens.html">Pants</a></li>
+                                <li> <a class="dropdown-item" href="hoodies.html">Hoodies</a></li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item1">
+                            <a class="nav-link" href="kids.html" style="color: white;">Kids</a>
+                        </li>
+                        <li class="nav-item1">
+                            <a class="nav-link" href="contact.html" style="color: white;">Contact</a>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+            <h2 class="all">Pants</h2> 
+            <div class="parent">
+                <div id="rightarrow" onclick="moveRight()">
+                    <button>&lt;</button>                    
+                </div>
+                <div class="card" id="c1" style="width: 18rem;">
+                    <img class="card-img-top" src="cpa.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Cargo Pants</h3>
+                            <h4 class="name">$35</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c2" style="width: 18rem;">
+                    <img class="card-img-top" src="pp.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Pajama Pants</h3>
+                            <h4 class="name">$30</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c3" style="width: 18rem;">
+                    <img class="card-img-top" src="tp.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Tracksuit Pants</h3>
+                            <h4 class="name">$30</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c4" style="width: 18rem;">
+                    <img class="card-img-top" src="otp.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Odd Trousers</h3>
+                            <h4 class="name">$25</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c5" style="width: 18rem;">
+                    <img class="card-img-top" src="ch.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Chinos</h3>
+                            <h4 class="name">$28</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c6" style="width: 18rem;">
+                    <img class="card-img-top" src="jpa.jpg" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Jeans</h3>
+                            <h4 class="name">$25</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c7" style="width: 18rem;">
+                    <img class="card-img-top" src="jpan.webp" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Joggers</h3>
+                            <h4 class="name">$29</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="card" id="c8" style="width: 18rem;">
+                    <img class="card-img-top" src="ct.jpg" alt="" style="height: 250px;">
+                    <div class="card-body">
+                            <h3 class="name">Cropped Trousers</h3>
+                            <h4 class="name">$49</h4>
+                            <p class="card-text">Pants are an item of clothing worn from the waist to anywhere between the knees and the ankles, covering both legs separately.</p>
+                        <button class="buttons">
+                            <div class="social-links">
+                                <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+                                    <p class="para"><b>Add to cart</b></p></a>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div id="leftarrow" onclick="moveLeft()">
+                    <button>&gt;</button>                    
+                </div>
+            </div>
+        </header>
+        </body>
+</html>

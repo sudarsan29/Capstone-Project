@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <style type="text/css">
+            body{
+                background-image: url(mo.jpg);
+                background-repeat: no-repeat;
+                position: relative;
+                background-size: cover;
+                height: 100vh;
+                width: 100%;
+            }
+            .div{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                width: 100%;
+                height: 70px;
+            }
+            .h1{
+                flex-direction: row;
+                flex-wrap: wrap;
+                outline: none;
+                align-items: center;
+                background-size: contain;
+                position: relative;
+                display: flex;
+                height: 70px;
+                margin-left: 30px;
+                width: 150px;
+            }
+            .input-field{
+                width: 500px;
+                height: 35px;
+                border-radius: 0px 0px 0px 10px;
+                border: none;
+                flex-wrap: wrap;
+                display: flex;
+                margin-left: 270px;
+            }
+            .button{
+                position: static;
+                background-color: yellow;
+                border-radius: 0px 10px 0px 0px;
+                display: flex;
+                border: none;
+                flex-wrap: wrap;
+                width: 100px;
+                height: 35px;
+                text-align: center;
+                align-items: center;
+                font-size: medium;
+            }
+            .button:hover{
+                background-color: orange;
+            }
+            .h2{
+                background-color: yellow;
+                text-align: center;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-left: 250px;
+                width: 70px;
+                height: 35px;
+                border-radius: 10px 10px 10px 10px;
+            }
+            .login{
+                color: black;
+                margin-left: 6px;
+                font-size: medium;
+            }
+            .h2:hover{
+                background-color: orange;
+            }
+            .social-link{
+                font-size: xx-large;
+                margin-left: 30px;
+                margin-top: -8px;
+                align-items: center;
+            }            
+           .div1{
+            background-color: none;
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+           }
+           .nav-item{
+            margin-left: 450px;
+            text-align: center;
+            align-items: center;
+            font-size: large;
+            color: white;
+            } 
+            .nav-item1{
+                font-size: large;
+                color: white;
+            }
+            .img{
+                align-items: center;
+                text-align: center;
+                margin-top: 120px;
+                color: white;
+                font-style: italic;
+                font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            }
+         
+            
+        </style>
+    </head>
+    <body>
+         <header>
+            <div class="div">
+               <img src="wolf.png" class="h1">
+               <input type="text" class="input-field" placeholder="Product name,Category name,etc.">
+               <button class="button button"><b>Search</b></button>
+               <button class="button h2">
+                <a href="login.html" class="login"><b>Login</b></a></button>
+               <div class="social-link">
+                 <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: yellow;"></i></a>
+               </div>
+            </div>
+            <div class="div1">
+                <ul class="nav nav-pills" style="color: white;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="all products.html" style="color: white;">All Products</a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Women</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="all products.html">All Products</a></li>
+                            <li> <a class="dropdown-item" href="dresses.html">Dresses</a></li>
+                            <li> <a class="dropdown-item" href="pants.html">Pants</a></li>
+                            <li> <a class="dropdown-item" href="skirts.html">Skirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Men</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="all productsmens.html">All Products</a></li>
+                            <li> <a class="dropdown-item" href="shirts.html">Shirts</a></li>
+                            <li> <a class="dropdown-item" href="pantsmens.html">Pants</a></li>
+                            <li> <a class="dropdown-item" href="hoodies.html">Hoodies</a></li>  
+                        </ul>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="kids.html" style="color: white;">Kids</a>
+                    </li>
+                    <li class="nav-item1">
+                        <a class="nav-link" href="contact.html" style="color: white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="img">
+            <h2><b>ECOMMERCE</b></h2>
+            <img src="wolf.png" alt="wolf img" style="height:300px" width="300px">
+            <br>
+            <h3>Clothes that talk on behalf of you. Something for every occassion.</h3>
+        </div>
+    </body>
+</html>

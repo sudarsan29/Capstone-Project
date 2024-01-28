@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script>
+            function myFunction(){
+                let a = 'admin@admin.com'
+                let b = '123456'
+                if(a===b){
+                    alert("login successful");
+                }else{
+                    alert("Incorrect pasword or email");
+                }
+            }
+        </script>
+        <style type="text/css">
+            body{
+                background-image: url(mo.jpg);
+                background-repeat: no-repeat;
+                position: fixed;
+                background-size: cover;
+                height: 100vh;
+                width: 100%;
+            }
+            .all{
+                color: white;
+                font-style: oblique;
+                text-align: center;
+                font-weight: bold;
+                margin-top: 30px;
+            }
+            form{
+                background-color: none;
+                margin-left: 550px;
+            }
+            p,h4{
+                color: white;
+            }
+            .input-field{
+                width: 500px;
+                height: 40px;
+                border-radius: 10px;
+            }
+            .btn-btn{
+                width: 500px;
+                height: 40px;
+                background-color: yellow;
+                font-size: larger;
+                margin-top: 35px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body> 
+        <h1 class="all">Login</h1>
+        <form name="testForm">
+            <p><h4>E-mail:</h4></p>
+            <input type="text" class="input-field" placeholder="Enter your E-mail">
+            <p><h4>Password:</h4></p>
+            <input type="text" class="input-field" placeholder="Enter your Password">
+            <button class="btn-btn" onclick="myFunction()" value="login"><b>Submit</b></button>
+        </form>
+    </body>
+</html>
